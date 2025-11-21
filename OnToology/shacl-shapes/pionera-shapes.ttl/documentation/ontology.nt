@@ -1,0 +1,226 @@
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/ns/shacl#class
+<http://www.w3.org/ns/shacl#class> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/ns/shacl#name
+<http://www.w3.org/ns/shacl#name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/ns/shacl#nodeKind
+<http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/ns/shacl#path
+<http://www.w3.org/ns/shacl#path> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/ns/shacl#property
+<http://www.w3.org/ns/shacl#property> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/ns/shacl#targetClass
+<http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/ns/shacl#NodeShape
+<http://www.w3.org/ns/shacl#NodeShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/shacl#PropertyShape
+<http://www.w3.org/ns/shacl#PropertyShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://pionera.org/shapes#DatasetShape
+<https://pionera.org/shapes#DatasetShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://pionera.org/shapes#DatasetShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://pionera.org/shapes#DatasetShape> <http://www.w3.org/2000/01/rdf-schema#label> "Dataset" .
+<https://pionera.org/shapes#DatasetShape> <http://www.w3.org/ns/shacl#name> "Dataset" .
+<https://pionera.org/shapes#DatasetShape> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+<https://pionera.org/shapes#DatasetShape> <http://www.w3.org/ns/shacl#property> <https://pionera.org/shapes#creatorProperty> .
+<https://pionera.org/shapes#DatasetShape> <http://www.w3.org/ns/shacl#property> <https://pionera.org/shapes#distributionProperty> .
+<https://pionera.org/shapes#DatasetShape> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/dcat#Dataset> .
+# 
+# https://pionera.org/shapes#HyperParameterSettingShape
+<https://pionera.org/shapes#HyperParameterSettingShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://pionera.org/shapes#HyperParameterSettingShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://pionera.org/shapes#HyperParameterSettingShape> <http://www.w3.org/2000/01/rdf-schema#label> "HyperParameterSetting" .
+<https://pionera.org/shapes#HyperParameterSettingShape> <http://www.w3.org/ns/shacl#name> "HyperParameterSetting" .
+<https://pionera.org/shapes#HyperParameterSettingShape> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+<https://pionera.org/shapes#HyperParameterSettingShape> <http://www.w3.org/ns/shacl#property> <https://pionera.org/shapes#specifiedByProperty> .
+<https://pionera.org/shapes#HyperParameterSettingShape> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/mls#HyperParameterSetting> .
+# 
+# https://pionera.org/shapes#HyperParameterShape
+<https://pionera.org/shapes#HyperParameterShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://pionera.org/shapes#HyperParameterShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://pionera.org/shapes#HyperParameterShape> <http://www.w3.org/2000/01/rdf-schema#label> "HyperParameter" .
+<https://pionera.org/shapes#HyperParameterShape> <http://www.w3.org/ns/shacl#name> "HyperParameter" .
+<https://pionera.org/shapes#HyperParameterShape> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+<https://pionera.org/shapes#HyperParameterShape> <http://www.w3.org/ns/shacl#property> <https://pionera.org/shapes#hasQualityProperty> .
+<https://pionera.org/shapes#HyperParameterShape> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/mls#HyperParameter> .
+# 
+# https://pionera.org/shapes#ImplementationShape
+<https://pionera.org/shapes#ImplementationShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://pionera.org/shapes#ImplementationShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://pionera.org/shapes#ImplementationShape> <http://www.w3.org/2000/01/rdf-schema#label> "Implementation" .
+<https://pionera.org/shapes#ImplementationShape> <http://www.w3.org/ns/shacl#name> "Implementation" .
+<https://pionera.org/shapes#ImplementationShape> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+<https://pionera.org/shapes#ImplementationShape> <http://www.w3.org/ns/shacl#property> <https://pionera.org/shapes#hasHyperParameterProperty> .
+<https://pionera.org/shapes#ImplementationShape> <http://www.w3.org/ns/shacl#property> <https://pionera.org/shapes#hasPartProperty> .
+<https://pionera.org/shapes#ImplementationShape> <http://www.w3.org/ns/shacl#property> <https://pionera.org/shapes#implementsProperty> .
+<https://pionera.org/shapes#ImplementationShape> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/mls#Implementation> .
+# 
+# https://pionera.org/shapes#ModelEvaluationShape
+<https://pionera.org/shapes#ModelEvaluationShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://pionera.org/shapes#ModelEvaluationShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://pionera.org/shapes#ModelEvaluationShape> <http://www.w3.org/2000/01/rdf-schema#label> "ModelEvaluation" .
+<https://pionera.org/shapes#ModelEvaluationShape> <http://www.w3.org/ns/shacl#name> "ModelEvaluation" .
+<https://pionera.org/shapes#ModelEvaluationShape> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+<https://pionera.org/shapes#ModelEvaluationShape> <http://www.w3.org/ns/shacl#property> <https://pionera.org/shapes#specifiedByProperty> .
+<https://pionera.org/shapes#ModelEvaluationShape> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/mls#ModelEvaluation> .
+# 
+# https://pionera.org/shapes#ModelShape
+<https://pionera.org/shapes#ModelShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://pionera.org/shapes#ModelShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://pionera.org/shapes#ModelShape> <http://www.w3.org/2000/01/rdf-schema#label> "Model" .
+<https://pionera.org/shapes#ModelShape> <http://www.w3.org/ns/shacl#name> "Model" .
+<https://pionera.org/shapes#ModelShape> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+<https://pionera.org/shapes#ModelShape> <http://www.w3.org/ns/shacl#property> <https://pionera.org/shapes#hasPolicyProperty> .
+<https://pionera.org/shapes#ModelShape> <http://www.w3.org/ns/shacl#property> <https://pionera.org/shapes#wasDerivedFromProperty> .
+<https://pionera.org/shapes#ModelShape> <http://www.w3.org/ns/shacl#targetClass> <http://pionera.org/ns/mlds#Model> .
+# 
+# https://pionera.org/shapes#RunShape
+<https://pionera.org/shapes#RunShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://pionera.org/shapes#RunShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://pionera.org/shapes#RunShape> <http://www.w3.org/2000/01/rdf-schema#label> "Run" .
+<https://pionera.org/shapes#RunShape> <http://www.w3.org/ns/shacl#name> "Run" .
+<https://pionera.org/shapes#RunShape> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+<https://pionera.org/shapes#RunShape> <http://www.w3.org/ns/shacl#property> <https://pionera.org/shapes#executesProperty> .
+<https://pionera.org/shapes#RunShape> <http://www.w3.org/ns/shacl#property> <https://pionera.org/shapes#hasOutputProperty> .
+<https://pionera.org/shapes#RunShape> <http://www.w3.org/ns/shacl#property> <https://pionera.org/shapes#realizesProperty> .
+<https://pionera.org/shapes#RunShape> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/mls#Run> .
+# 
+# https://pionera.org/shapes#creatorProperty
+<https://pionera.org/shapes#creatorProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://pionera.org/shapes#creatorProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://pionera.org/shapes#creatorProperty> <http://www.w3.org/2000/01/rdf-schema#label> "creator" .
+<https://pionera.org/shapes#creatorProperty> <http://www.w3.org/ns/shacl#class> <http://xmlns.com/foaf/0.1/Agent> .
+<https://pionera.org/shapes#creatorProperty> <http://www.w3.org/ns/shacl#name> "creator" .
+<https://pionera.org/shapes#creatorProperty> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
+<https://pionera.org/shapes#creatorProperty> <http://www.w3.org/ns/shacl#path> <http://purl.org/dc/terms/creator> .
+# 
+# https://pionera.org/shapes#distributionProperty
+<https://pionera.org/shapes#distributionProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://pionera.org/shapes#distributionProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://pionera.org/shapes#distributionProperty> <http://www.w3.org/2000/01/rdf-schema#label> "distribution" .
+<https://pionera.org/shapes#distributionProperty> <http://www.w3.org/ns/shacl#class> <http://www.w3.org/ns/dcat#Distribution> .
+<https://pionera.org/shapes#distributionProperty> <http://www.w3.org/ns/shacl#name> "distribution" .
+<https://pionera.org/shapes#distributionProperty> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
+<https://pionera.org/shapes#distributionProperty> <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/dcat#distribution> .
+# 
+# https://pionera.org/shapes#executesProperty
+<https://pionera.org/shapes#executesProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://pionera.org/shapes#executesProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://pionera.org/shapes#executesProperty> <http://www.w3.org/2000/01/rdf-schema#label> "executes" .
+<https://pionera.org/shapes#executesProperty> <http://www.w3.org/ns/shacl#class> <http://www.w3.org/ns/mls#Implementation> .
+<https://pionera.org/shapes#executesProperty> <http://www.w3.org/ns/shacl#name> "executes" .
+<https://pionera.org/shapes#executesProperty> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
+<https://pionera.org/shapes#executesProperty> <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/mls#executes> .
+# 
+# https://pionera.org/shapes#hasHyperParameterProperty
+<https://pionera.org/shapes#hasHyperParameterProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://pionera.org/shapes#hasHyperParameterProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://pionera.org/shapes#hasHyperParameterProperty> <http://www.w3.org/2000/01/rdf-schema#label> "has hyper-parameter" .
+<https://pionera.org/shapes#hasHyperParameterProperty> <http://www.w3.org/ns/shacl#class> <http://www.w3.org/ns/mls#HyperParameter> .
+<https://pionera.org/shapes#hasHyperParameterProperty> <http://www.w3.org/ns/shacl#name> "has hyper-parameter" .
+<https://pionera.org/shapes#hasHyperParameterProperty> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
+<https://pionera.org/shapes#hasHyperParameterProperty> <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/mls#hasHyperParameter> .
+# 
+# https://pionera.org/shapes#hasOutputProperty
+<https://pionera.org/shapes#hasOutputProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://pionera.org/shapes#hasOutputProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://pionera.org/shapes#hasOutputProperty> <http://www.w3.org/2000/01/rdf-schema#label> "has output" .
+<https://pionera.org/shapes#hasOutputProperty> <http://www.w3.org/ns/shacl#name> "has output" .
+<https://pionera.org/shapes#hasOutputProperty> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
+<https://pionera.org/shapes#hasOutputProperty> <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/mls#hasOutput> .
+# 
+# https://pionera.org/shapes#hasPartProperty
+<https://pionera.org/shapes#hasPartProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://pionera.org/shapes#hasPartProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://pionera.org/shapes#hasPartProperty> <http://www.w3.org/2000/01/rdf-schema#label> "has part" .
+<https://pionera.org/shapes#hasPartProperty> <http://www.w3.org/ns/shacl#name> "has part" .
+<https://pionera.org/shapes#hasPartProperty> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
+<https://pionera.org/shapes#hasPartProperty> <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/mls#hasPart> .
+# 
+# https://pionera.org/shapes#hasPolicyProperty
+<https://pionera.org/shapes#hasPolicyProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://pionera.org/shapes#hasPolicyProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://pionera.org/shapes#hasPolicyProperty> <http://www.w3.org/2000/01/rdf-schema#label> "has policy" .
+<https://pionera.org/shapes#hasPolicyProperty> <http://www.w3.org/ns/shacl#name> "has policy" .
+<https://pionera.org/shapes#hasPolicyProperty> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
+<https://pionera.org/shapes#hasPolicyProperty> <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/odrl/2/hasPolicy> .
+# 
+# https://pionera.org/shapes#hasQualityProperty
+<https://pionera.org/shapes#hasQualityProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://pionera.org/shapes#hasQualityProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://pionera.org/shapes#hasQualityProperty> <http://www.w3.org/2000/01/rdf-schema#label> "has quality" .
+<https://pionera.org/shapes#hasQualityProperty> <http://www.w3.org/ns/shacl#class> <http://w3id.org/mlso/HyperParameterCharacteristic> .
+<https://pionera.org/shapes#hasQualityProperty> <http://www.w3.org/ns/shacl#name> "has quality" .
+<https://pionera.org/shapes#hasQualityProperty> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
+<https://pionera.org/shapes#hasQualityProperty> <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/mls#hasQuality> .
+# 
+# https://pionera.org/shapes#implementsProperty
+<https://pionera.org/shapes#implementsProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://pionera.org/shapes#implementsProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://pionera.org/shapes#implementsProperty> <http://www.w3.org/2000/01/rdf-schema#label> "implements" .
+<https://pionera.org/shapes#implementsProperty> <http://www.w3.org/ns/shacl#class> <http://www.w3.org/ns/mls#Algorithm> .
+<https://pionera.org/shapes#implementsProperty> <http://www.w3.org/ns/shacl#name> "implements" .
+<https://pionera.org/shapes#implementsProperty> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
+<https://pionera.org/shapes#implementsProperty> <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/mls#implements> .
+# 
+# https://pionera.org/shapes#realizesProperty
+<https://pionera.org/shapes#realizesProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://pionera.org/shapes#realizesProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://pionera.org/shapes#realizesProperty> <http://www.w3.org/2000/01/rdf-schema#label> "realizes" .
+<https://pionera.org/shapes#realizesProperty> <http://www.w3.org/ns/shacl#class> <http://www.w3.org/ns/mls#Algorithm> .
+<https://pionera.org/shapes#realizesProperty> <http://www.w3.org/ns/shacl#name> "realizes" .
+<https://pionera.org/shapes#realizesProperty> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
+<https://pionera.org/shapes#realizesProperty> <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/mls#realizes> .
+# 
+# https://pionera.org/shapes#specifiedByProperty
+<https://pionera.org/shapes#specifiedByProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://pionera.org/shapes#specifiedByProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://pionera.org/shapes#specifiedByProperty> <http://www.w3.org/2000/01/rdf-schema#label> "specified by" .
+<https://pionera.org/shapes#specifiedByProperty> <http://www.w3.org/ns/shacl#name> "specified by" .
+<https://pionera.org/shapes#specifiedByProperty> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
+<https://pionera.org/shapes#specifiedByProperty> <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/mls#specifiedBy> .
+# 
+# https://pionera.org/shapes#wasDerivedFromProperty
+<https://pionera.org/shapes#wasDerivedFromProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://pionera.org/shapes#wasDerivedFromProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://pionera.org/shapes#wasDerivedFromProperty> <http://www.w3.org/2000/01/rdf-schema#label> "was derived from" .
+<https://pionera.org/shapes#wasDerivedFromProperty> <http://www.w3.org/ns/shacl#class> <http://pionera.org/ns/mlds#Model> .
+<https://pionera.org/shapes#wasDerivedFromProperty> <http://www.w3.org/ns/shacl#name> "was derived from" .
+<https://pionera.org/shapes#wasDerivedFromProperty> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
+<https://pionera.org/shapes#wasDerivedFromProperty> <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/prov#wasDerivedFrom> .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

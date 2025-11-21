@@ -1,0 +1,111 @@
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/ns/dcat#accessService
+<http://www.w3.org/ns/dcat#accessService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/ns/dcat#distribution
+<http://www.w3.org/ns/dcat#distribution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/ns/dcat#servesDataset
+<http://www.w3.org/ns/dcat#servesDataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/ns/odrl/2/hasPolicy
+<http://www.w3.org/ns/odrl/2/hasPolicy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/ns/odrl/2/permission
+<http://www.w3.org/ns/odrl/2/permission> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/ns/odrl/2/target
+<http://www.w3.org/ns/odrl/2/target> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/ns/prov#wasDerivedFrom
+<http://www.w3.org/ns/prov#wasDerivedFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://xmlns.com/foaf/0.1/name
+<http://xmlns.com/foaf/0.1/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://pionera.org/ns/mlds#Model
+<http://pionera.org/ns/mlds#Model> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/dcat#DataService
+<http://www.w3.org/ns/dcat#DataService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/dcat#Distribution
+<http://www.w3.org/ns/dcat#Distribution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/odrl/2/Agreement
+<http://www.w3.org/ns/odrl/2/Agreement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/odrl/2/Permission
+<http://www.w3.org/ns/odrl/2/Permission> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://xmlns.com/foaf/0.1/Agent
+<http://xmlns.com/foaf/0.1/Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://pionera.org/example#Model0
+<http://pionera.org/example#Model0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://pionera.org/example#Model0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://pionera.org/ns/mlds#Model> .
+# 
+# http://pionera.org/example#Model1
+<http://pionera.org/example#Model1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://pionera.org/example#Model1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://pionera.org/ns/mlds#Model> .
+<http://pionera.org/example#Model1> <http://purl.org/dc/terms/creator> <http://pionera.org/example#Provider1> .
+<http://pionera.org/example#Model1> <http://www.w3.org/ns/dcat#distribution> <http://pionera.org/example#Model1Distribution> .
+<http://pionera.org/example#Model1> <http://www.w3.org/ns/odrl/2/hasPolicy> <http://pionera.org/example#Model1Policy> .
+<http://pionera.org/example#Model1> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://pionera.org/example#Model0> .
+# 
+# http://pionera.org/example#Model1Distribution
+<http://pionera.org/example#Model1Distribution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://pionera.org/example#Model1Distribution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#Distribution> .
+<http://pionera.org/example#Model1Distribution> <http://www.w3.org/ns/dcat#accessService> <http://pionera.org/example#Model1Service> .
+# 
+# http://pionera.org/example#Model1Permission
+<http://pionera.org/example#Model1Permission> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://pionera.org/example#Model1Permission> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Permission> .
+<http://pionera.org/example#Model1Permission> <http://www.w3.org/ns/odrl/2/target> <http://pionera.org/example#Model1> .
+# 
+# http://pionera.org/example#Model1Policy
+<http://pionera.org/example#Model1Policy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://pionera.org/example#Model1Policy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Agreement> .
+<http://pionera.org/example#Model1Policy> <http://www.w3.org/ns/odrl/2/permission> <http://pionera.org/example#Model1Permission> .
+# 
+# http://pionera.org/example#Model1Service
+<http://pionera.org/example#Model1Service> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://pionera.org/example#Model1Service> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#DataService> .
+<http://pionera.org/example#Model1Service> <http://www.w3.org/ns/dcat#servesDataset> <http://pionera.org/example#Model1> .
+# 
+# http://pionera.org/example#Provider1
+<http://pionera.org/example#Provider1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://pionera.org/example#Provider1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<http://pionera.org/example#Provider1> <http://xmlns.com/foaf/0.1/name> "Example provider" .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

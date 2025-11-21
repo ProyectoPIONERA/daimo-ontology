@@ -1,0 +1,49 @@
+{
+  "@context" : {
+    "Distribution" : {
+      "@id" : "http://www.w3.org/ns/dcat#Distribution"
+    },
+    "Permission" : {
+      "@id" : "http://www.w3.org/ns/odrl/2/Permission"
+    },
+    "distribution" : {
+      "@id" : "http://www.w3.org/ns/dcat#distribution"
+    },
+    "Agreement" : {
+      "@id" : "http://www.w3.org/ns/odrl/2/Agreement"
+    },
+    "Agent" : {
+      "@id" : "http://xmlns.com/foaf/0.1/Agent"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator"
+    },
+    "name" : {
+      "@id" : "http://xmlns.com/foaf/0.1/name"
+    },
+    "DataService" : {
+      "@id" : "http://www.w3.org/ns/dcat#DataService"
+    },
+    "wasDerivedFrom" : {
+      "@id" : "http://www.w3.org/ns/prov#wasDerivedFrom"
+    },
+    "Model" : {
+      "@id" : "http://pionera.org/ns/mlds#Model"
+    },
+    "accessService" : {
+      "@id" : "http://www.w3.org/ns/dcat#accessService"
+    },
+    "hasPolicy" : {
+      "@id" : "http://www.w3.org/ns/odrl/2/hasPolicy"
+    },
+    "permission" : {
+      "@id" : "http://www.w3.org/ns/odrl/2/permission"
+    },
+    "target" : {
+      "@id" : "http://www.w3.org/ns/odrl/2/target"
+    },
+    "servesDataset" : {
+      "@id" : "http://www.w3.org/ns/dcat#servesDataset"
+    }
+  }
+}

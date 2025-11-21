@@ -1,0 +1,316 @@
+@prefix : <http://www.w3.org/ns/mls#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.w3.org/ns/mls#> .
+
+<http://www.w3.org/ns/mls#> rdf:type owl:Ontology ;
+                             <https://w3id.org/mod#createdWith> <https://chowlk.linkeddata.es/> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  https://w3id.org/mod#createdWith
+<https://w3id.org/mod#createdWith> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:ObjectProperty ;
+                                   rdfs:domain <http://www.w3.org/ns/dcat#Dataset> ;
+                                   rdfs:range <http://xmlns.com/foaf/0.1/Agent> ;
+                                   rdfs:label "creator" .
+
+
+###  http://www.w3.org/ns/dcat#accessService
+<http://www.w3.org/ns/dcat#accessService> rdf:type owl:ObjectProperty ;
+                                          rdfs:domain <http://www.w3.org/ns/dcat#Distribution> ;
+                                          rdfs:range <http://www.w3.org/ns/dcat#DataService> ;
+                                          rdfs:label "access service" .
+
+
+###  http://www.w3.org/ns/dcat#distribution
+<http://www.w3.org/ns/dcat#distribution> rdf:type owl:ObjectProperty ;
+                                         rdfs:domain <http://www.w3.org/ns/dcat#Dataset> ;
+                                         rdfs:range <http://www.w3.org/ns/dcat#Distribution> ;
+                                         rdfs:label "distribution" .
+
+
+###  http://www.w3.org/ns/dcat#servesDataset
+<http://www.w3.org/ns/dcat#servesDataset> rdf:type owl:ObjectProperty ;
+                                          rdfs:domain <http://www.w3.org/ns/dcat#DataService> ;
+                                          rdfs:range <http://www.w3.org/ns/dcat#Dataset> ;
+                                          rdfs:label "serves dataset" .
+
+
+###  http://www.w3.org/ns/mls#SourceCode
+:SourceCode rdf:type owl:ObjectProperty ;
+            rdfs:domain <https://w3id.org/okn/o/sd/Software> ;
+            rdfs:range <https://w3id.org/okn/o/sd/SourceCode> ;
+            rdfs:label "source code" .
+
+
+###  http://www.w3.org/ns/mls#executes
+:executes rdf:type owl:ObjectProperty ;
+          rdfs:domain :Run ;
+          rdfs:range :Implementation ;
+          rdfs:label "executes" .
+
+
+###  http://www.w3.org/ns/mls#hasHyperParameter
+:hasHyperParameter rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Implementation ;
+                   rdfs:range :HyperParameter ;
+                   rdfs:label "has hyper parameter" .
+
+
+###  http://www.w3.org/ns/mls#hasOutput
+:hasOutput rdf:type owl:ObjectProperty ;
+           rdfs:domain :Run ;
+           rdfs:range <http://pionera.org/ns/mlds#Model> ,
+                      :ModelEvaluation ;
+           rdfs:label "has output" .
+
+
+###  http://www.w3.org/ns/mls#hasPart
+:hasPart rdf:type owl:ObjectProperty ;
+         rdfs:domain :EvaluationProcedure ,
+                     :EvaluationSpecification ,
+                     :Implementation ;
+         rdfs:range :EvaluationMeasure ,
+                    :EvaluationSpecification ,
+                    <https://w3id.org/okn/o/sd/Software> ;
+         rdfs:label "has part" .
+
+
+###  http://www.w3.org/ns/mls#hasQuality
+:hasQuality rdf:type owl:ObjectProperty ;
+            rdfs:domain :HyperParameter ;
+            rdfs:range <http://w3id.org/mlso/HyperParameterCharacteristic> ;
+            rdfs:label "has quality" .
+
+
+###  http://www.w3.org/ns/mls#implements
+:implements rdf:type owl:ObjectProperty ;
+            rdfs:domain :Implementation ;
+            rdfs:range :Algorithm ;
+            rdfs:label "implements" .
+
+
+###  http://www.w3.org/ns/mls#realizes
+:realizes rdf:type owl:ObjectProperty ;
+          rdfs:domain :Run ;
+          rdfs:range :Algorithm ;
+          rdfs:label "realizes" .
+
+
+###  http://www.w3.org/ns/mls#specifiedBy
+:specifiedBy rdf:type owl:ObjectProperty ;
+             rdfs:domain :HyperParameterSetting ,
+                         :ModelEvaluation ;
+             rdfs:range :EvaluationMeasure ,
+                        :HyperParameter ;
+             rdfs:label "specified by" .
+
+
+###  http://www.w3.org/ns/odrl/2/assigneeOf
+<http://www.w3.org/ns/odrl/2/assigneeOf> rdf:type owl:ObjectProperty ;
+                                         rdfs:domain <http://www.w3.org/ns/odrl/2/Party> ;
+                                         rdfs:range <http://www.w3.org/ns/odrl/2/Offer> ;
+                                         rdfs:label "assignee of" .
+
+
+###  http://www.w3.org/ns/odrl/2/assignerOf
+<http://www.w3.org/ns/odrl/2/assignerOf> rdf:type owl:ObjectProperty ;
+                                         rdfs:domain <http://www.w3.org/ns/odrl/2/Party> ;
+                                         rdfs:range <http://www.w3.org/ns/odrl/2/Offer> ;
+                                         rdfs:label "assigner of" .
+
+
+###  http://www.w3.org/ns/odrl/2/hasPolicy
+<http://www.w3.org/ns/odrl/2/hasPolicy> rdf:type owl:ObjectProperty ;
+                                        rdfs:domain <http://pionera.org/ns/mlds#Model> ;
+                                        rdfs:range <http://www.w3.org/ns/odrl/2/Agreement> ,
+                                                   <http://www.w3.org/ns/odrl/2/Offer> ;
+                                        rdfs:label "has policy" .
+
+
+###  http://www.w3.org/ns/odrl/2/obligation
+<http://www.w3.org/ns/odrl/2/obligation> rdf:type owl:ObjectProperty ;
+                                         rdfs:domain <http://www.w3.org/ns/odrl/2/Agreement> ,
+                                                     <http://www.w3.org/ns/odrl/2/Offer> ;
+                                         rdfs:range <http://www.w3.org/ns/odrl/2/Rule> ;
+                                         rdfs:label "obligation" .
+
+
+###  http://www.w3.org/ns/odrl/2/permission
+<http://www.w3.org/ns/odrl/2/permission> rdf:type owl:ObjectProperty ;
+                                         rdfs:domain <http://www.w3.org/ns/odrl/2/Agreement> ,
+                                                     <http://www.w3.org/ns/odrl/2/Offer> ;
+                                         rdfs:range <http://www.w3.org/ns/odrl/2/Rule> ;
+                                         rdfs:label "permission" .
+
+
+###  http://www.w3.org/ns/odrl/2/prohibition
+<http://www.w3.org/ns/odrl/2/prohibition> rdf:type owl:ObjectProperty ;
+                                          rdfs:domain <http://www.w3.org/ns/odrl/2/Agreement> ,
+                                                      <http://www.w3.org/ns/odrl/2/Offer> ;
+                                          rdfs:range <http://www.w3.org/ns/odrl/2/Rule> ;
+                                          rdfs:label "prohibition" .
+
+
+###  http://www.w3.org/ns/odrl/2/target
+<http://www.w3.org/ns/odrl/2/target> rdf:type owl:ObjectProperty ;
+                                     rdfs:domain <http://www.w3.org/ns/odrl/2/Rule> ;
+                                     rdfs:range <http://pionera.org/ns/mlds#Model> ;
+                                     rdfs:label "target" .
+
+
+###  http://www.w3.org/ns/prov#wasDerivedFrom
+<http://www.w3.org/ns/prov#wasDerivedFrom> rdf:type owl:ObjectProperty ;
+                                           rdfs:domain <http://pionera.org/ns/mlds#Model> ;
+                                           rdfs:range <http://pionera.org/ns/mlds#Model> ;
+                                           rdfs:label "was derived from" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://pionera.org/ns/mlds#Model
+<http://pionera.org/ns/mlds#Model> rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://www.w3.org/ns/dcat#Dataset> ;
+                                   rdfs:label "Model" .
+
+
+###  http://w3id.org/mlso/HyperParameterCharacteristic
+<http://w3id.org/mlso/HyperParameterCharacteristic> rdf:type owl:Class ;
+                                                    rdfs:label "Hyper Parameter Characteristic" .
+
+
+###  http://www.w3.org/ns/dcat#DataService
+<http://www.w3.org/ns/dcat#DataService> rdf:type owl:Class ;
+                                        rdfs:label "Data Service" .
+
+
+###  http://www.w3.org/ns/dcat#Dataset
+<http://www.w3.org/ns/dcat#Dataset> rdf:type owl:Class ;
+                                    rdfs:label "Dataset" .
+
+
+###  http://www.w3.org/ns/dcat#Distribution
+<http://www.w3.org/ns/dcat#Distribution> rdf:type owl:Class ;
+                                         rdfs:label "Distribution" .
+
+
+###  http://www.w3.org/ns/mls#Algorithm
+:Algorithm rdf:type owl:Class ;
+           rdfs:label "Algorithm" .
+
+
+###  http://www.w3.org/ns/mls#EvaluationMeasure
+:EvaluationMeasure rdf:type owl:Class ;
+                   rdfs:label "Evaluation Measure" .
+
+
+###  http://www.w3.org/ns/mls#EvaluationProcedure
+:EvaluationProcedure rdf:type owl:Class ;
+                     rdfs:label "Evaluation Procedure" .
+
+
+###  http://www.w3.org/ns/mls#EvaluationSpecification
+:EvaluationSpecification rdf:type owl:Class ;
+                         rdfs:label "Evaluation Specification" .
+
+
+###  http://www.w3.org/ns/mls#HyperParameter
+:HyperParameter rdf:type owl:Class ;
+                rdfs:label "Hyper Parameter" .
+
+
+###  http://www.w3.org/ns/mls#HyperParameterSetting
+:HyperParameterSetting rdf:type owl:Class ;
+                       rdfs:label "Hyper Parameter Setting" .
+
+
+###  http://www.w3.org/ns/mls#Implementation
+:Implementation rdf:type owl:Class ;
+                rdfs:label "Implementation" .
+
+
+###  http://www.w3.org/ns/mls#ModelEvaluation
+:ModelEvaluation rdf:type owl:Class ;
+                 rdfs:label "Model Evaluation" .
+
+
+###  http://www.w3.org/ns/mls#Run
+:Run rdf:type owl:Class ;
+     rdfs:label "Run" .
+
+
+###  http://www.w3.org/ns/odrl/2/Agreement
+<http://www.w3.org/ns/odrl/2/Agreement> rdf:type owl:Class ;
+                                        rdfs:label "Agreement" .
+
+
+###  http://www.w3.org/ns/odrl/2/Duty
+<http://www.w3.org/ns/odrl/2/Duty> rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://www.w3.org/ns/odrl/2/Rule> ;
+                                   rdfs:label "Duty" .
+
+
+###  http://www.w3.org/ns/odrl/2/Offer
+<http://www.w3.org/ns/odrl/2/Offer> rdf:type owl:Class ;
+                                    rdfs:label "Offer" .
+
+
+###  http://www.w3.org/ns/odrl/2/Party
+<http://www.w3.org/ns/odrl/2/Party> rdf:type owl:Class ;
+                                    rdfs:label "Party" .
+
+
+###  http://www.w3.org/ns/odrl/2/Permission
+<http://www.w3.org/ns/odrl/2/Permission> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://www.w3.org/ns/odrl/2/Rule> ;
+                                         rdfs:label "Permission" .
+
+
+###  http://www.w3.org/ns/odrl/2/Prohibition
+<http://www.w3.org/ns/odrl/2/Prohibition> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://www.w3.org/ns/odrl/2/Rule> ;
+                                          rdfs:label "Prohibition" .
+
+
+###  http://www.w3.org/ns/odrl/2/Rule
+<http://www.w3.org/ns/odrl/2/Rule> rdf:type owl:Class ;
+                                   rdfs:label "Rule" .
+
+
+###  http://xmlns.com/foaf/0.1/Agent
+<http://xmlns.com/foaf/0.1/Agent> rdf:type owl:Class ;
+                                  rdfs:label "Agent" .
+
+
+###  https://w3id.org/okn/o/sd/Software
+<https://w3id.org/okn/o/sd/Software> rdf:type owl:Class ;
+                                     rdfs:label "Software" .
+
+
+###  https://w3id.org/okn/o/sd/SoftwareConfiguration
+<https://w3id.org/okn/o/sd/SoftwareConfiguration> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <https://w3id.org/okn/o/sd/Software> ;
+                                                  rdfs:label "Software Configuration" .
+
+
+###  https://w3id.org/okn/o/sd/SourceCode
+<https://w3id.org/okn/o/sd/SourceCode> rdf:type owl:Class ;
+                                       rdfs:label "Source Code" .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

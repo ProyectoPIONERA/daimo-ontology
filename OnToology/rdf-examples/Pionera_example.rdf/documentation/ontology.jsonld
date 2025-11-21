@@ -1,0 +1,118 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ]
+}, {
+  "@id" : "http://pionera.org/example#Model0",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://pionera.org/ns/mlds#Model"
+  } ]
+}, {
+  "@id" : "http://pionera.org/example#Model1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@id" : "http://pionera.org/example#Provider1"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://pionera.org/ns/mlds#Model"
+  } ],
+  "http://www.w3.org/ns/dcat#distribution" : [ {
+    "@id" : "http://pionera.org/example#Model1Distribution"
+  } ],
+  "http://www.w3.org/ns/odrl/2/hasPolicy" : [ {
+    "@id" : "http://pionera.org/example#Model1Policy"
+  } ],
+  "http://www.w3.org/ns/prov#wasDerivedFrom" : [ {
+    "@id" : "http://pionera.org/example#Model0"
+  } ]
+}, {
+  "@id" : "http://pionera.org/example#Model1Distribution",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dcat#Distribution"
+  } ],
+  "http://www.w3.org/ns/dcat#accessService" : [ {
+    "@id" : "http://pionera.org/example#Model1Service"
+  } ]
+}, {
+  "@id" : "http://pionera.org/example#Model1Permission",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/odrl/2/Permission"
+  } ],
+  "http://www.w3.org/ns/odrl/2/target" : [ {
+    "@id" : "http://pionera.org/example#Model1"
+  } ]
+}, {
+  "@id" : "http://pionera.org/example#Model1Policy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/odrl/2/Agreement"
+  } ],
+  "http://www.w3.org/ns/odrl/2/permission" : [ {
+    "@id" : "http://pionera.org/example#Model1Permission"
+  } ]
+}, {
+  "@id" : "http://pionera.org/example#Model1Service",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dcat#DataService"
+  } ],
+  "http://www.w3.org/ns/dcat#servesDataset" : [ {
+    "@id" : "http://pionera.org/example#Model1"
+  } ]
+}, {
+  "@id" : "http://pionera.org/example#Provider1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Agent"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Example provider"
+  } ]
+}, {
+  "@id" : "http://pionera.org/ns/mlds#Model",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/dcat#DataService",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/ns/dcat#Distribution",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/ns/dcat#accessService",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/dcat#distribution",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/dcat#servesDataset",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/odrl/2/Agreement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/ns/odrl/2/Permission",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/ns/odrl/2/hasPolicy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/odrl/2/permission",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/odrl/2/target",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/prov#wasDerivedFrom",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/Agent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/name",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+} ]

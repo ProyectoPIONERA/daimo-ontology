@@ -1,0 +1,234 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:dcat="http://www.w3.org/ns/dcat#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:odrl="http://www.w3.org/ns/odrl/2/"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <Ontology/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#accessService -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/dcat#accessService"/>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#distribution -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/dcat#distribution"/>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#servesDataset -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/dcat#servesDataset"/>
+    
+
+
+    <!-- http://www.w3.org/ns/odrl/2/hasPolicy -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/odrl/2/hasPolicy"/>
+    
+
+
+    <!-- http://www.w3.org/ns/odrl/2/permission -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/odrl/2/permission"/>
+    
+
+
+    <!-- http://www.w3.org/ns/odrl/2/target -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/odrl/2/target"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#wasDerivedFrom -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/prov#wasDerivedFrom"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/name -->
+
+
+    <AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/name"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://pionera.org/ns/mlds#Model -->
+
+
+    <Class rdf:about="http://pionera.org/ns/mlds#Model"/>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#DataService -->
+
+
+    <Class rdf:about="http://www.w3.org/ns/dcat#DataService"/>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#Distribution -->
+
+
+    <Class rdf:about="http://www.w3.org/ns/dcat#Distribution"/>
+    
+
+
+    <!-- http://www.w3.org/ns/odrl/2/Agreement -->
+
+
+    <Class rdf:about="http://www.w3.org/ns/odrl/2/Agreement"/>
+    
+
+
+    <!-- http://www.w3.org/ns/odrl/2/Permission -->
+
+
+    <Class rdf:about="http://www.w3.org/ns/odrl/2/Permission"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Agent -->
+
+
+    <Class rdf:about="http://xmlns.com/foaf/0.1/Agent"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://pionera.org/example#Model0 -->
+
+
+    <NamedIndividual rdf:about="http://pionera.org/example#Model0">
+        <rdf:type rdf:resource="http://pionera.org/ns/mlds#Model"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://pionera.org/example#Model1 -->
+
+
+    <NamedIndividual rdf:about="http://pionera.org/example#Model1">
+        <rdf:type rdf:resource="http://pionera.org/ns/mlds#Model"/>
+        <terms:creator rdf:resource="http://pionera.org/example#Provider1"/>
+        <dcat:distribution rdf:resource="http://pionera.org/example#Model1Distribution"/>
+        <odrl:hasPolicy rdf:resource="http://pionera.org/example#Model1Policy"/>
+        <prov:wasDerivedFrom rdf:resource="http://pionera.org/example#Model0"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://pionera.org/example#Model1Distribution -->
+
+
+    <NamedIndividual rdf:about="http://pionera.org/example#Model1Distribution">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+        <dcat:accessService rdf:resource="http://pionera.org/example#Model1Service"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://pionera.org/example#Model1Permission -->
+
+
+    <NamedIndividual rdf:about="http://pionera.org/example#Model1Permission">
+        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Permission"/>
+        <odrl:target rdf:resource="http://pionera.org/example#Model1"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://pionera.org/example#Model1Policy -->
+
+
+    <NamedIndividual rdf:about="http://pionera.org/example#Model1Policy">
+        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Agreement"/>
+        <odrl:permission rdf:resource="http://pionera.org/example#Model1Permission"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://pionera.org/example#Model1Service -->
+
+
+    <NamedIndividual rdf:about="http://pionera.org/example#Model1Service">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
+        <dcat:servesDataset rdf:resource="http://pionera.org/example#Model1"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://pionera.org/example#Provider1 -->
+
+
+    <NamedIndividual rdf:about="http://pionera.org/example#Provider1">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <foaf:name>Example provider</foaf:name>
+    </NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

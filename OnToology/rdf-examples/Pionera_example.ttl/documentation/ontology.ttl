@@ -1,0 +1,127 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.w3.org/2002/07/owl#> .
+
+[ rdf:type owl:Ontology
+ ] .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/dcat#accessService
+<http://www.w3.org/ns/dcat#accessService> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/dcat#distribution
+<http://www.w3.org/ns/dcat#distribution> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/dcat#servesDataset
+<http://www.w3.org/ns/dcat#servesDataset> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/odrl/2/hasPolicy
+<http://www.w3.org/ns/odrl/2/hasPolicy> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/odrl/2/permission
+<http://www.w3.org/ns/odrl/2/permission> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/odrl/2/target
+<http://www.w3.org/ns/odrl/2/target> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/prov#wasDerivedFrom
+<http://www.w3.org/ns/prov#wasDerivedFrom> rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/name
+<http://xmlns.com/foaf/0.1/name> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://pionera.org/ns/mlds#Model
+<http://pionera.org/ns/mlds#Model> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/dcat#DataService
+<http://www.w3.org/ns/dcat#DataService> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/dcat#Distribution
+<http://www.w3.org/ns/dcat#Distribution> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/odrl/2/Agreement
+<http://www.w3.org/ns/odrl/2/Agreement> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/odrl/2/Permission
+<http://www.w3.org/ns/odrl/2/Permission> rdf:type owl:Class .
+
+
+###  http://xmlns.com/foaf/0.1/Agent
+<http://xmlns.com/foaf/0.1/Agent> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://pionera.org/example#Model0
+<http://pionera.org/example#Model0> rdf:type owl:NamedIndividual ,
+                                             <http://pionera.org/ns/mlds#Model> .
+
+
+###  http://pionera.org/example#Model1
+<http://pionera.org/example#Model1> rdf:type owl:NamedIndividual ,
+                                             <http://pionera.org/ns/mlds#Model> ;
+                                    <http://purl.org/dc/terms/creator> <http://pionera.org/example#Provider1> ;
+                                    <http://www.w3.org/ns/dcat#distribution> <http://pionera.org/example#Model1Distribution> ;
+                                    <http://www.w3.org/ns/odrl/2/hasPolicy> <http://pionera.org/example#Model1Policy> ;
+                                    <http://www.w3.org/ns/prov#wasDerivedFrom> <http://pionera.org/example#Model0> .
+
+
+###  http://pionera.org/example#Model1Distribution
+<http://pionera.org/example#Model1Distribution> rdf:type owl:NamedIndividual ,
+                                                         <http://www.w3.org/ns/dcat#Distribution> ;
+                                                <http://www.w3.org/ns/dcat#accessService> <http://pionera.org/example#Model1Service> .
+
+
+###  http://pionera.org/example#Model1Permission
+<http://pionera.org/example#Model1Permission> rdf:type owl:NamedIndividual ,
+                                                       <http://www.w3.org/ns/odrl/2/Permission> ;
+                                              <http://www.w3.org/ns/odrl/2/target> <http://pionera.org/example#Model1> .
+
+
+###  http://pionera.org/example#Model1Policy
+<http://pionera.org/example#Model1Policy> rdf:type owl:NamedIndividual ,
+                                                   <http://www.w3.org/ns/odrl/2/Agreement> ;
+                                          <http://www.w3.org/ns/odrl/2/permission> <http://pionera.org/example#Model1Permission> .
+
+
+###  http://pionera.org/example#Model1Service
+<http://pionera.org/example#Model1Service> rdf:type owl:NamedIndividual ,
+                                                    <http://www.w3.org/ns/dcat#DataService> ;
+                                           <http://www.w3.org/ns/dcat#servesDataset> <http://pionera.org/example#Model1> .
+
+
+###  http://pionera.org/example#Provider1
+<http://pionera.org/example#Provider1> rdf:type owl:NamedIndividual ,
+                                                <http://xmlns.com/foaf/0.1/Agent> ;
+                                       <http://xmlns.com/foaf/0.1/name> "Example provider" .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

@@ -1,0 +1,377 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:shacl="http://www.w3.org/ns/shacl#">
+    <Ontology/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#class -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#class"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#name -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#name"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#nodeKind -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#nodeKind"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#path -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#path"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#property -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#property"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#targetClass -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#targetClass"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#NodeShape -->
+
+
+    <Class rdf:about="http://www.w3.org/ns/shacl#NodeShape"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#PropertyShape -->
+
+
+    <Class rdf:about="http://www.w3.org/ns/shacl#PropertyShape"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://pionera.org/shapes#DatasetShape -->
+
+
+    <NamedIndividual rdf:about="https://pionera.org/shapes#DatasetShape">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:label>Dataset</rdfs:label>
+        <shacl:name>Dataset</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:property rdf:resource="https://pionera.org/shapes#creatorProperty"/>
+        <shacl:property rdf:resource="https://pionera.org/shapes#distributionProperty"/>
+        <shacl:targetClass rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://pionera.org/shapes#HyperParameterSettingShape -->
+
+
+    <NamedIndividual rdf:about="https://pionera.org/shapes#HyperParameterSettingShape">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:label>HyperParameterSetting</rdfs:label>
+        <shacl:name>HyperParameterSetting</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:property rdf:resource="https://pionera.org/shapes#specifiedByProperty"/>
+        <shacl:targetClass rdf:resource="http://www.w3.org/ns/mls#HyperParameterSetting"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://pionera.org/shapes#HyperParameterShape -->
+
+
+    <NamedIndividual rdf:about="https://pionera.org/shapes#HyperParameterShape">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:label>HyperParameter</rdfs:label>
+        <shacl:name>HyperParameter</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:property rdf:resource="https://pionera.org/shapes#hasQualityProperty"/>
+        <shacl:targetClass rdf:resource="http://www.w3.org/ns/mls#HyperParameter"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://pionera.org/shapes#ImplementationShape -->
+
+
+    <NamedIndividual rdf:about="https://pionera.org/shapes#ImplementationShape">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:label>Implementation</rdfs:label>
+        <shacl:name>Implementation</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:property rdf:resource="https://pionera.org/shapes#hasHyperParameterProperty"/>
+        <shacl:property rdf:resource="https://pionera.org/shapes#hasPartProperty"/>
+        <shacl:property rdf:resource="https://pionera.org/shapes#implementsProperty"/>
+        <shacl:targetClass rdf:resource="http://www.w3.org/ns/mls#Implementation"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://pionera.org/shapes#ModelEvaluationShape -->
+
+
+    <NamedIndividual rdf:about="https://pionera.org/shapes#ModelEvaluationShape">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:label>ModelEvaluation</rdfs:label>
+        <shacl:name>ModelEvaluation</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:property rdf:resource="https://pionera.org/shapes#specifiedByProperty"/>
+        <shacl:targetClass rdf:resource="http://www.w3.org/ns/mls#ModelEvaluation"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://pionera.org/shapes#ModelShape -->
+
+
+    <NamedIndividual rdf:about="https://pionera.org/shapes#ModelShape">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:label>Model</rdfs:label>
+        <shacl:name>Model</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:property rdf:resource="https://pionera.org/shapes#hasPolicyProperty"/>
+        <shacl:property rdf:resource="https://pionera.org/shapes#wasDerivedFromProperty"/>
+        <shacl:targetClass rdf:resource="http://pionera.org/ns/mlds#Model"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://pionera.org/shapes#RunShape -->
+
+
+    <NamedIndividual rdf:about="https://pionera.org/shapes#RunShape">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:label>Run</rdfs:label>
+        <shacl:name>Run</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:property rdf:resource="https://pionera.org/shapes#executesProperty"/>
+        <shacl:property rdf:resource="https://pionera.org/shapes#hasOutputProperty"/>
+        <shacl:property rdf:resource="https://pionera.org/shapes#realizesProperty"/>
+        <shacl:targetClass rdf:resource="http://www.w3.org/ns/mls#Run"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://pionera.org/shapes#creatorProperty -->
+
+
+    <NamedIndividual rdf:about="https://pionera.org/shapes#creatorProperty">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>creator</rdfs:label>
+        <shacl:class rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <shacl:name>creator</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+        <shacl:path rdf:resource="http://purl.org/dc/terms/creator"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://pionera.org/shapes#distributionProperty -->
+
+
+    <NamedIndividual rdf:about="https://pionera.org/shapes#distributionProperty">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>distribution</rdfs:label>
+        <shacl:class rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+        <shacl:name>distribution</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+        <shacl:path rdf:resource="http://www.w3.org/ns/dcat#distribution"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://pionera.org/shapes#executesProperty -->
+
+
+    <NamedIndividual rdf:about="https://pionera.org/shapes#executesProperty">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>executes</rdfs:label>
+        <shacl:class rdf:resource="http://www.w3.org/ns/mls#Implementation"/>
+        <shacl:name>executes</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+        <shacl:path rdf:resource="http://www.w3.org/ns/mls#executes"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://pionera.org/shapes#hasHyperParameterProperty -->
+
+
+    <NamedIndividual rdf:about="https://pionera.org/shapes#hasHyperParameterProperty">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>has hyper-parameter</rdfs:label>
+        <shacl:class rdf:resource="http://www.w3.org/ns/mls#HyperParameter"/>
+        <shacl:name>has hyper-parameter</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+        <shacl:path rdf:resource="http://www.w3.org/ns/mls#hasHyperParameter"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://pionera.org/shapes#hasOutputProperty -->
+
+
+    <NamedIndividual rdf:about="https://pionera.org/shapes#hasOutputProperty">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>has output</rdfs:label>
+        <shacl:name>has output</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+        <shacl:path rdf:resource="http://www.w3.org/ns/mls#hasOutput"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://pionera.org/shapes#hasPartProperty -->
+
+
+    <NamedIndividual rdf:about="https://pionera.org/shapes#hasPartProperty">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>has part</rdfs:label>
+        <shacl:name>has part</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+        <shacl:path rdf:resource="http://www.w3.org/ns/mls#hasPart"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://pionera.org/shapes#hasPolicyProperty -->
+
+
+    <NamedIndividual rdf:about="https://pionera.org/shapes#hasPolicyProperty">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>has policy</rdfs:label>
+        <shacl:name>has policy</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+        <shacl:path rdf:resource="http://www.w3.org/ns/odrl/2/hasPolicy"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://pionera.org/shapes#hasQualityProperty -->
+
+
+    <NamedIndividual rdf:about="https://pionera.org/shapes#hasQualityProperty">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>has quality</rdfs:label>
+        <shacl:class rdf:resource="http://w3id.org/mlso/HyperParameterCharacteristic"/>
+        <shacl:name>has quality</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+        <shacl:path rdf:resource="http://www.w3.org/ns/mls#hasQuality"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://pionera.org/shapes#implementsProperty -->
+
+
+    <NamedIndividual rdf:about="https://pionera.org/shapes#implementsProperty">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>implements</rdfs:label>
+        <shacl:class rdf:resource="http://www.w3.org/ns/mls#Algorithm"/>
+        <shacl:name>implements</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+        <shacl:path rdf:resource="http://www.w3.org/ns/mls#implements"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://pionera.org/shapes#realizesProperty -->
+
+
+    <NamedIndividual rdf:about="https://pionera.org/shapes#realizesProperty">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>realizes</rdfs:label>
+        <shacl:class rdf:resource="http://www.w3.org/ns/mls#Algorithm"/>
+        <shacl:name>realizes</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+        <shacl:path rdf:resource="http://www.w3.org/ns/mls#realizes"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://pionera.org/shapes#specifiedByProperty -->
+
+
+    <NamedIndividual rdf:about="https://pionera.org/shapes#specifiedByProperty">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>specified by</rdfs:label>
+        <shacl:name>specified by</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+        <shacl:path rdf:resource="http://www.w3.org/ns/mls#specifiedBy"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://pionera.org/shapes#wasDerivedFromProperty -->
+
+
+    <NamedIndividual rdf:about="https://pionera.org/shapes#wasDerivedFromProperty">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>was derived from</rdfs:label>
+        <shacl:class rdf:resource="http://pionera.org/ns/mlds#Model"/>
+        <shacl:name>was derived from</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+        <shacl:path rdf:resource="http://www.w3.org/ns/prov#wasDerivedFrom"/>
+    </NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

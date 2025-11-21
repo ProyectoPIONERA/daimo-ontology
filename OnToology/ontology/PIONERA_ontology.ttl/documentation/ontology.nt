@@ -1,0 +1,275 @@
+<http://www.w3.org/ns/mls#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.w3.org/ns/mls#> <https://w3id.org/mod#createdWith> <https://chowlk.linkeddata.es/> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/mod#createdWith
+<https://w3id.org/mod#createdWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/terms/creator> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/dcat#Dataset> .
+<http://purl.org/dc/terms/creator> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Agent> .
+<http://purl.org/dc/terms/creator> <http://www.w3.org/2000/01/rdf-schema#label> "creator" .
+# 
+# http://www.w3.org/ns/dcat#accessService
+<http://www.w3.org/ns/dcat#accessService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/dcat#accessService> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/dcat#Distribution> .
+<http://www.w3.org/ns/dcat#accessService> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/dcat#DataService> .
+<http://www.w3.org/ns/dcat#accessService> <http://www.w3.org/2000/01/rdf-schema#label> "access service" .
+# 
+# http://www.w3.org/ns/dcat#distribution
+<http://www.w3.org/ns/dcat#distribution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/dcat#distribution> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/dcat#Dataset> .
+<http://www.w3.org/ns/dcat#distribution> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/dcat#Distribution> .
+<http://www.w3.org/ns/dcat#distribution> <http://www.w3.org/2000/01/rdf-schema#label> "distribution" .
+# 
+# http://www.w3.org/ns/dcat#servesDataset
+<http://www.w3.org/ns/dcat#servesDataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/dcat#servesDataset> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/dcat#DataService> .
+<http://www.w3.org/ns/dcat#servesDataset> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/dcat#Dataset> .
+<http://www.w3.org/ns/dcat#servesDataset> <http://www.w3.org/2000/01/rdf-schema#label> "serves dataset" .
+# 
+# http://www.w3.org/ns/mls#SourceCode
+<http://www.w3.org/ns/mls#SourceCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/mls#SourceCode> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sd/Software> .
+<http://www.w3.org/ns/mls#SourceCode> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/okn/o/sd/SourceCode> .
+<http://www.w3.org/ns/mls#SourceCode> <http://www.w3.org/2000/01/rdf-schema#label> "source code" .
+# 
+# http://www.w3.org/ns/mls#executes
+<http://www.w3.org/ns/mls#executes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/mls#executes> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/mls#Run> .
+<http://www.w3.org/ns/mls#executes> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/mls#Implementation> .
+<http://www.w3.org/ns/mls#executes> <http://www.w3.org/2000/01/rdf-schema#label> "executes" .
+# 
+# http://www.w3.org/ns/mls#hasHyperParameter
+<http://www.w3.org/ns/mls#hasHyperParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/mls#hasHyperParameter> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/mls#Implementation> .
+<http://www.w3.org/ns/mls#hasHyperParameter> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/mls#HyperParameter> .
+<http://www.w3.org/ns/mls#hasHyperParameter> <http://www.w3.org/2000/01/rdf-schema#label> "has hyper parameter" .
+# 
+# http://www.w3.org/ns/mls#hasOutput
+<http://www.w3.org/ns/mls#hasOutput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/mls#hasOutput> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/mls#Run> .
+<http://www.w3.org/ns/mls#hasOutput> <http://www.w3.org/2000/01/rdf-schema#range> <http://pionera.org/ns/mlds#Model> .
+<http://www.w3.org/ns/mls#hasOutput> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/mls#ModelEvaluation> .
+<http://www.w3.org/ns/mls#hasOutput> <http://www.w3.org/2000/01/rdf-schema#label> "has output" .
+# 
+# http://www.w3.org/ns/mls#hasPart
+<http://www.w3.org/ns/mls#hasPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/mls#hasPart> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/mls#EvaluationProcedure> .
+<http://www.w3.org/ns/mls#hasPart> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/mls#EvaluationSpecification> .
+<http://www.w3.org/ns/mls#hasPart> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/mls#Implementation> .
+<http://www.w3.org/ns/mls#hasPart> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/mls#EvaluationMeasure> .
+<http://www.w3.org/ns/mls#hasPart> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/mls#EvaluationSpecification> .
+<http://www.w3.org/ns/mls#hasPart> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/okn/o/sd/Software> .
+<http://www.w3.org/ns/mls#hasPart> <http://www.w3.org/2000/01/rdf-schema#label> "has part" .
+# 
+# http://www.w3.org/ns/mls#hasQuality
+<http://www.w3.org/ns/mls#hasQuality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/mls#hasQuality> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/mls#HyperParameter> .
+<http://www.w3.org/ns/mls#hasQuality> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/mlso/HyperParameterCharacteristic> .
+<http://www.w3.org/ns/mls#hasQuality> <http://www.w3.org/2000/01/rdf-schema#label> "has quality" .
+# 
+# http://www.w3.org/ns/mls#implements
+<http://www.w3.org/ns/mls#implements> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/mls#implements> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/mls#Implementation> .
+<http://www.w3.org/ns/mls#implements> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/mls#Algorithm> .
+<http://www.w3.org/ns/mls#implements> <http://www.w3.org/2000/01/rdf-schema#label> "implements" .
+# 
+# http://www.w3.org/ns/mls#realizes
+<http://www.w3.org/ns/mls#realizes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/mls#realizes> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/mls#Run> .
+<http://www.w3.org/ns/mls#realizes> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/mls#Algorithm> .
+<http://www.w3.org/ns/mls#realizes> <http://www.w3.org/2000/01/rdf-schema#label> "realizes" .
+# 
+# http://www.w3.org/ns/mls#specifiedBy
+<http://www.w3.org/ns/mls#specifiedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/mls#specifiedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/mls#HyperParameterSetting> .
+<http://www.w3.org/ns/mls#specifiedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/mls#ModelEvaluation> .
+<http://www.w3.org/ns/mls#specifiedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/mls#EvaluationMeasure> .
+<http://www.w3.org/ns/mls#specifiedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/mls#HyperParameter> .
+<http://www.w3.org/ns/mls#specifiedBy> <http://www.w3.org/2000/01/rdf-schema#label> "specified by" .
+# 
+# http://www.w3.org/ns/odrl/2/assigneeOf
+<http://www.w3.org/ns/odrl/2/assigneeOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/odrl/2/assigneeOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/odrl/2/Party> .
+<http://www.w3.org/ns/odrl/2/assigneeOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/odrl/2/Offer> .
+<http://www.w3.org/ns/odrl/2/assigneeOf> <http://www.w3.org/2000/01/rdf-schema#label> "assignee of" .
+# 
+# http://www.w3.org/ns/odrl/2/assignerOf
+<http://www.w3.org/ns/odrl/2/assignerOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/odrl/2/assignerOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/odrl/2/Party> .
+<http://www.w3.org/ns/odrl/2/assignerOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/odrl/2/Offer> .
+<http://www.w3.org/ns/odrl/2/assignerOf> <http://www.w3.org/2000/01/rdf-schema#label> "assigner of" .
+# 
+# http://www.w3.org/ns/odrl/2/hasPolicy
+<http://www.w3.org/ns/odrl/2/hasPolicy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/odrl/2/hasPolicy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://pionera.org/ns/mlds#Model> .
+<http://www.w3.org/ns/odrl/2/hasPolicy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/odrl/2/Agreement> .
+<http://www.w3.org/ns/odrl/2/hasPolicy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/odrl/2/Offer> .
+<http://www.w3.org/ns/odrl/2/hasPolicy> <http://www.w3.org/2000/01/rdf-schema#label> "has policy" .
+# 
+# http://www.w3.org/ns/odrl/2/obligation
+<http://www.w3.org/ns/odrl/2/obligation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/odrl/2/obligation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/odrl/2/Agreement> .
+<http://www.w3.org/ns/odrl/2/obligation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/odrl/2/Offer> .
+<http://www.w3.org/ns/odrl/2/obligation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/odrl/2/Rule> .
+<http://www.w3.org/ns/odrl/2/obligation> <http://www.w3.org/2000/01/rdf-schema#label> "obligation" .
+# 
+# http://www.w3.org/ns/odrl/2/permission
+<http://www.w3.org/ns/odrl/2/permission> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/odrl/2/permission> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/odrl/2/Agreement> .
+<http://www.w3.org/ns/odrl/2/permission> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/odrl/2/Offer> .
+<http://www.w3.org/ns/odrl/2/permission> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/odrl/2/Rule> .
+<http://www.w3.org/ns/odrl/2/permission> <http://www.w3.org/2000/01/rdf-schema#label> "permission" .
+# 
+# http://www.w3.org/ns/odrl/2/prohibition
+<http://www.w3.org/ns/odrl/2/prohibition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/odrl/2/prohibition> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/odrl/2/Agreement> .
+<http://www.w3.org/ns/odrl/2/prohibition> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/odrl/2/Offer> .
+<http://www.w3.org/ns/odrl/2/prohibition> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/odrl/2/Rule> .
+<http://www.w3.org/ns/odrl/2/prohibition> <http://www.w3.org/2000/01/rdf-schema#label> "prohibition" .
+# 
+# http://www.w3.org/ns/odrl/2/target
+<http://www.w3.org/ns/odrl/2/target> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/odrl/2/target> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/odrl/2/Rule> .
+<http://www.w3.org/ns/odrl/2/target> <http://www.w3.org/2000/01/rdf-schema#range> <http://pionera.org/ns/mlds#Model> .
+<http://www.w3.org/ns/odrl/2/target> <http://www.w3.org/2000/01/rdf-schema#label> "target" .
+# 
+# http://www.w3.org/ns/prov#wasDerivedFrom
+<http://www.w3.org/ns/prov#wasDerivedFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/prov#wasDerivedFrom> <http://www.w3.org/2000/01/rdf-schema#domain> <http://pionera.org/ns/mlds#Model> .
+<http://www.w3.org/ns/prov#wasDerivedFrom> <http://www.w3.org/2000/01/rdf-schema#range> <http://pionera.org/ns/mlds#Model> .
+<http://www.w3.org/ns/prov#wasDerivedFrom> <http://www.w3.org/2000/01/rdf-schema#label> "was derived from" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://pionera.org/ns/mlds#Model
+<http://pionera.org/ns/mlds#Model> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://pionera.org/ns/mlds#Model> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/dcat#Dataset> .
+<http://pionera.org/ns/mlds#Model> <http://www.w3.org/2000/01/rdf-schema#label> "Model" .
+# 
+# http://w3id.org/mlso/HyperParameterCharacteristic
+<http://w3id.org/mlso/HyperParameterCharacteristic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/mlso/HyperParameterCharacteristic> <http://www.w3.org/2000/01/rdf-schema#label> "Hyper Parameter Characteristic" .
+# 
+# http://www.w3.org/ns/dcat#DataService
+<http://www.w3.org/ns/dcat#DataService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/dcat#DataService> <http://www.w3.org/2000/01/rdf-schema#label> "Data Service" .
+# 
+# http://www.w3.org/ns/dcat#Dataset
+<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2000/01/rdf-schema#label> "Dataset" .
+# 
+# http://www.w3.org/ns/dcat#Distribution
+<http://www.w3.org/ns/dcat#Distribution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/dcat#Distribution> <http://www.w3.org/2000/01/rdf-schema#label> "Distribution" .
+# 
+# http://www.w3.org/ns/mls#Algorithm
+<http://www.w3.org/ns/mls#Algorithm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/mls#Algorithm> <http://www.w3.org/2000/01/rdf-schema#label> "Algorithm" .
+# 
+# http://www.w3.org/ns/mls#EvaluationMeasure
+<http://www.w3.org/ns/mls#EvaluationMeasure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/mls#EvaluationMeasure> <http://www.w3.org/2000/01/rdf-schema#label> "Evaluation Measure" .
+# 
+# http://www.w3.org/ns/mls#EvaluationProcedure
+<http://www.w3.org/ns/mls#EvaluationProcedure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/mls#EvaluationProcedure> <http://www.w3.org/2000/01/rdf-schema#label> "Evaluation Procedure" .
+# 
+# http://www.w3.org/ns/mls#EvaluationSpecification
+<http://www.w3.org/ns/mls#EvaluationSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/mls#EvaluationSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "Evaluation Specification" .
+# 
+# http://www.w3.org/ns/mls#HyperParameter
+<http://www.w3.org/ns/mls#HyperParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/mls#HyperParameter> <http://www.w3.org/2000/01/rdf-schema#label> "Hyper Parameter" .
+# 
+# http://www.w3.org/ns/mls#HyperParameterSetting
+<http://www.w3.org/ns/mls#HyperParameterSetting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/mls#HyperParameterSetting> <http://www.w3.org/2000/01/rdf-schema#label> "Hyper Parameter Setting" .
+# 
+# http://www.w3.org/ns/mls#Implementation
+<http://www.w3.org/ns/mls#Implementation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/mls#Implementation> <http://www.w3.org/2000/01/rdf-schema#label> "Implementation" .
+# 
+# http://www.w3.org/ns/mls#ModelEvaluation
+<http://www.w3.org/ns/mls#ModelEvaluation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/mls#ModelEvaluation> <http://www.w3.org/2000/01/rdf-schema#label> "Model Evaluation" .
+# 
+# http://www.w3.org/ns/mls#Run
+<http://www.w3.org/ns/mls#Run> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/mls#Run> <http://www.w3.org/2000/01/rdf-schema#label> "Run" .
+# 
+# http://www.w3.org/ns/odrl/2/Agreement
+<http://www.w3.org/ns/odrl/2/Agreement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/odrl/2/Agreement> <http://www.w3.org/2000/01/rdf-schema#label> "Agreement" .
+# 
+# http://www.w3.org/ns/odrl/2/Duty
+<http://www.w3.org/ns/odrl/2/Duty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/odrl/2/Duty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Rule> .
+<http://www.w3.org/ns/odrl/2/Duty> <http://www.w3.org/2000/01/rdf-schema#label> "Duty" .
+# 
+# http://www.w3.org/ns/odrl/2/Offer
+<http://www.w3.org/ns/odrl/2/Offer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/odrl/2/Offer> <http://www.w3.org/2000/01/rdf-schema#label> "Offer" .
+# 
+# http://www.w3.org/ns/odrl/2/Party
+<http://www.w3.org/ns/odrl/2/Party> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/odrl/2/Party> <http://www.w3.org/2000/01/rdf-schema#label> "Party" .
+# 
+# http://www.w3.org/ns/odrl/2/Permission
+<http://www.w3.org/ns/odrl/2/Permission> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/odrl/2/Permission> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Rule> .
+<http://www.w3.org/ns/odrl/2/Permission> <http://www.w3.org/2000/01/rdf-schema#label> "Permission" .
+# 
+# http://www.w3.org/ns/odrl/2/Prohibition
+<http://www.w3.org/ns/odrl/2/Prohibition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/odrl/2/Prohibition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Rule> .
+<http://www.w3.org/ns/odrl/2/Prohibition> <http://www.w3.org/2000/01/rdf-schema#label> "Prohibition" .
+# 
+# http://www.w3.org/ns/odrl/2/Rule
+<http://www.w3.org/ns/odrl/2/Rule> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/odrl/2/Rule> <http://www.w3.org/2000/01/rdf-schema#label> "Rule" .
+# 
+# http://xmlns.com/foaf/0.1/Agent
+<http://xmlns.com/foaf/0.1/Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://xmlns.com/foaf/0.1/Agent> <http://www.w3.org/2000/01/rdf-schema#label> "Agent" .
+# 
+# https://w3id.org/okn/o/sd/Software
+<https://w3id.org/okn/o/sd/Software> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/okn/o/sd/Software> <http://www.w3.org/2000/01/rdf-schema#label> "Software" .
+# 
+# https://w3id.org/okn/o/sd/SoftwareConfiguration
+<https://w3id.org/okn/o/sd/SoftwareConfiguration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/okn/o/sd/SoftwareConfiguration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/okn/o/sd/Software> .
+<https://w3id.org/okn/o/sd/SoftwareConfiguration> <http://www.w3.org/2000/01/rdf-schema#label> "Software Configuration" .
+# 
+# https://w3id.org/okn/o/sd/SourceCode
+<https://w3id.org/okn/o/sd/SourceCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/okn/o/sd/SourceCode> <http://www.w3.org/2000/01/rdf-schema#label> "Source Code" .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

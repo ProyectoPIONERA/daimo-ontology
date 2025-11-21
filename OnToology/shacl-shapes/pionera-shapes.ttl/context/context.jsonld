@@ -1,0 +1,31 @@
+{
+  "@context" : {
+    "path" : {
+      "@id" : "http://www.w3.org/ns/shacl#path"
+    },
+    "targetClass" : {
+      "@id" : "http://www.w3.org/ns/shacl#targetClass"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "property" : {
+      "@id" : "http://www.w3.org/ns/shacl#property"
+    },
+    "nodeKind" : {
+      "@id" : "http://www.w3.org/ns/shacl#nodeKind"
+    },
+    "class" : {
+      "@id" : "http://www.w3.org/ns/shacl#class"
+    },
+    "name" : {
+      "@id" : "http://www.w3.org/ns/shacl#name"
+    },
+    "NodeShape" : {
+      "@id" : "http://www.w3.org/ns/shacl#NodeShape"
+    },
+    "PropertyShape" : {
+      "@id" : "http://www.w3.org/ns/shacl#PropertyShape"
+    }
+  }
+}

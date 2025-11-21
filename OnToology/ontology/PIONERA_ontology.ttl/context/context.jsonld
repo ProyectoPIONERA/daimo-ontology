@@ -1,0 +1,166 @@
+{
+  "@context" : {
+    "implements" : {
+      "@id" : "http://www.w3.org/ns/mls#implements",
+      "@type" : "@id"
+    },
+    "executes" : {
+      "@id" : "http://www.w3.org/ns/mls#executes",
+      "@type" : "@id"
+    },
+    "Software" : {
+      "@id" : "https://w3id.org/okn/o/sd/Software"
+    },
+    "Run" : {
+      "@id" : "http://www.w3.org/ns/mls#Run"
+    },
+    "Dataset" : {
+      "@id" : "http://www.w3.org/ns/dcat#Dataset"
+    },
+    "Duty" : {
+      "@id" : "http://www.w3.org/ns/odrl/2/Duty"
+    },
+    "HyperParameterSetting" : {
+      "@id" : "http://www.w3.org/ns/mls#HyperParameterSetting"
+    },
+    "specifiedBy" : {
+      "@id" : "http://www.w3.org/ns/mls#specifiedBy",
+      "@type" : "@id"
+    },
+    "Distribution" : {
+      "@id" : "http://www.w3.org/ns/dcat#Distribution"
+    },
+    "Permission" : {
+      "@id" : "http://www.w3.org/ns/odrl/2/Permission"
+    },
+    "distribution" : {
+      "@id" : "http://www.w3.org/ns/dcat#distribution",
+      "@type" : "@id"
+    },
+    "SourceCode" : {
+      "@id" : "http://www.w3.org/ns/mls#SourceCode",
+      "@type" : "@id"
+    },
+    "hasOutput" : {
+      "@id" : "http://www.w3.org/ns/mls#hasOutput",
+      "@type" : "@id"
+    },
+    "Offer" : {
+      "@id" : "http://www.w3.org/ns/odrl/2/Offer"
+    },
+    "Agreement" : {
+      "@id" : "http://www.w3.org/ns/odrl/2/Agreement"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "Prohibition" : {
+      "@id" : "http://www.w3.org/ns/odrl/2/Prohibition"
+    },
+    "hasPart" : {
+      "@id" : "http://www.w3.org/ns/mls#hasPart",
+      "@type" : "@id"
+    },
+    "HyperParameterCharacteristic" : {
+      "@id" : "http://w3id.org/mlso/HyperParameterCharacteristic"
+    },
+    "EvaluationProcedure" : {
+      "@id" : "http://www.w3.org/ns/mls#EvaluationProcedure"
+    },
+    "EvaluationMeasure" : {
+      "@id" : "http://www.w3.org/ns/mls#EvaluationMeasure"
+    },
+    "SoftwareConfiguration" : {
+      "@id" : "https://w3id.org/okn/o/sd/SoftwareConfiguration"
+    },
+    "Agent" : {
+      "@id" : "http://xmlns.com/foaf/0.1/Agent"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator",
+      "@type" : "@id"
+    },
+    "DataService" : {
+      "@id" : "http://www.w3.org/ns/dcat#DataService"
+    },
+    "wasDerivedFrom" : {
+      "@id" : "http://www.w3.org/ns/prov#wasDerivedFrom",
+      "@type" : "@id"
+    },
+    "Model" : {
+      "@id" : "http://pionera.org/ns/mlds#Model"
+    },
+    "Algorithm" : {
+      "@id" : "http://www.w3.org/ns/mls#Algorithm"
+    },
+    "accessService" : {
+      "@id" : "http://www.w3.org/ns/dcat#accessService",
+      "@type" : "@id"
+    },
+    "createdWith" : {
+      "@id" : "https://w3id.org/mod#createdWith"
+    },
+    "assigneeOf" : {
+      "@id" : "http://www.w3.org/ns/odrl/2/assigneeOf",
+      "@type" : "@id"
+    },
+    "hasPolicy" : {
+      "@id" : "http://www.w3.org/ns/odrl/2/hasPolicy",
+      "@type" : "@id"
+    },
+    "permission" : {
+      "@id" : "http://www.w3.org/ns/odrl/2/permission",
+      "@type" : "@id"
+    },
+    "obligation" : {
+      "@id" : "http://www.w3.org/ns/odrl/2/obligation",
+      "@type" : "@id"
+    },
+    "HyperParameter" : {
+      "@id" : "http://www.w3.org/ns/mls#HyperParameter"
+    },
+    "hasQuality" : {
+      "@id" : "http://www.w3.org/ns/mls#hasQuality",
+      "@type" : "@id"
+    },
+    "Rule" : {
+      "@id" : "http://www.w3.org/ns/odrl/2/Rule"
+    },
+    "hasHyperParameter" : {
+      "@id" : "http://www.w3.org/ns/mls#hasHyperParameter",
+      "@type" : "@id"
+    },
+    "Implementation" : {
+      "@id" : "http://www.w3.org/ns/mls#Implementation"
+    },
+    "ModelEvaluation" : {
+      "@id" : "http://www.w3.org/ns/mls#ModelEvaluation"
+    },
+    "target" : {
+      "@id" : "http://www.w3.org/ns/odrl/2/target",
+      "@type" : "@id"
+    },
+    "Party" : {
+      "@id" : "http://www.w3.org/ns/odrl/2/Party"
+    },
+    "servesDataset" : {
+      "@id" : "http://www.w3.org/ns/dcat#servesDataset",
+      "@type" : "@id"
+    },
+    "assignerOf" : {
+      "@id" : "http://www.w3.org/ns/odrl/2/assignerOf",
+      "@type" : "@id"
+    },
+    "EvaluationSpecification" : {
+      "@id" : "http://www.w3.org/ns/mls#EvaluationSpecification"
+    },
+    "prohibition" : {
+      "@id" : "http://www.w3.org/ns/odrl/2/prohibition",
+      "@type" : "@id"
+    },
+    "realizes" : {
+      "@id" : "http://www.w3.org/ns/mls#realizes",
+      "@type" : "@id"
+    }
+  }
+}
