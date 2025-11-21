@@ -1,0 +1,205 @@
+@prefix dcat:      <http://www.w3.org/ns/dcat#> .
+@prefix dcterms:   <http://purl.org/dc/terms/> .
+@prefix foaf:      <http://xmlns.com/foaf/0.1/> .
+@prefix mlds:      <http://pionera.org/ns/mlds#> .
+@prefix mls:       <http://www.w3.org/ns/mls#> .
+@prefix mlso:      <http://w3id.org/mlso/> .
+@prefix odrl:      <http://www.w3.org/ns/odrl/2/> .
+@prefix pionera-sh: <https://pionera.org/shapes#> .
+@prefix prov:      <http://www.w3.org/ns/prov#> .
+@prefix rdfs:      <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh:        <http://www.w3.org/ns/shacl#> .
+
+###########
+# NodeShapes
+###########
+
+pionera-sh:DatasetShape
+    a sh:NodeShape ;
+    rdfs:label "Dataset" ;
+    sh:name "Dataset" ;
+    sh:nodeKind sh:IRI ;
+    sh:targetClass dcat:Dataset ;
+    sh:property
+        pionera-sh:creatorProperty,
+        pionera-sh:distributionProperty
+.
+
+pionera-sh:ModelShape
+    a sh:NodeShape ;
+    rdfs:label "Model" ;
+    sh:name "Model" ;
+    sh:nodeKind sh:IRI ;
+    sh:targetClass mlds:Model ;
+    sh:property
+        pionera-sh:hasPolicyProperty,
+        pionera-sh:wasDerivedFromProperty
+.
+
+pionera-sh:RunShape
+    a sh:NodeShape ;
+    rdfs:label "Run" ;
+    sh:name "Run" ;
+    sh:nodeKind sh:IRI ;
+    sh:targetClass mls:Run ;
+    sh:property
+        pionera-sh:executesProperty,
+        pionera-sh:hasOutputProperty,
+        pionera-sh:realizesProperty
+.
+
+pionera-sh:ImplementationShape
+    a sh:NodeShape ;
+    rdfs:label "Implementation" ;
+    sh:name "Implementation" ;
+    sh:nodeKind sh:IRI ;
+    sh:targetClass mls:Implementation ;
+    sh:property
+        pionera-sh:hasHyperParameterProperty,
+        pionera-sh:hasPartProperty,
+        pionera-sh:implementsProperty
+.
+
+pionera-sh:HyperParameterShape
+    a sh:NodeShape ;
+    rdfs:label "HyperParameter" ;
+    sh:name "HyperParameter" ;
+    sh:nodeKind sh:IRI ;
+    sh:targetClass mls:HyperParameter ;
+    sh:property
+        pionera-sh:hasQualityProperty
+.
+
+pionera-sh:HyperParameterSettingShape
+    a sh:NodeShape ;
+    rdfs:label "HyperParameterSetting" ;
+    sh:name "HyperParameterSetting" ;
+    sh:nodeKind sh:IRI ;
+    sh:targetClass mls:HyperParameterSetting ;
+    sh:property
+        pionera-sh:specifiedByProperty
+.
+
+pionera-sh:ModelEvaluationShape
+    a sh:NodeShape ;
+    rdfs:label "ModelEvaluation" ;
+    sh:name "ModelEvaluation" ;
+    sh:nodeKind sh:IRI ;
+    sh:targetClass mls:ModelEvaluation ;
+    sh:property
+        pionera-sh:specifiedByProperty
+.
+
+###############
+# PropertyShapes
+###############
+
+pionera-sh:creatorProperty
+    a sh:PropertyShape ;
+    rdfs:label "creator" ;
+    sh:name "creator" ;
+    sh:path dcterms:creator ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:class foaf:Agent
+.
+
+pionera-sh:distributionProperty
+    a sh:PropertyShape ;
+    rdfs:label "distribution" ;
+    sh:name "distribution" ;
+    sh:path dcat:distribution ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:class dcat:Distribution
+.
+
+pionera-sh:hasPolicyProperty
+    a sh:PropertyShape ;
+    rdfs:label "has policy" ;
+    sh:name "has policy" ;
+    sh:path odrl:hasPolicy ;
+    sh:nodeKind sh:BlankNodeOrIRI
+    # sin sh:class porque en la ontología tiene varios rangos (Offer, Agreement)
+.
+
+pionera-sh:wasDerivedFromProperty
+    a sh:PropertyShape ;
+    rdfs:label "was derived from" ;
+    sh:name "was derived from" ;
+    sh:path prov:wasDerivedFrom ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:class mlds:Model
+.
+
+pionera-sh:executesProperty
+    a sh:PropertyShape ;
+    rdfs:label "executes" ;
+    sh:name "executes" ;
+    sh:path mls:executes ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:class mls:Implementation
+.
+
+pionera-sh:hasOutputProperty
+    a sh:PropertyShape ;
+    rdfs:label "has output" ;
+    sh:name "has output" ;
+    sh:path mls:hasOutput ;
+    sh:nodeKind sh:BlankNodeOrIRI
+    # sin sh:class porque en la ontología tiene varios rangos (Model, ModelEvaluation)
+.
+
+pionera-sh:realizesProperty
+    a sh:PropertyShape ;
+    rdfs:label "realizes" ;
+    sh:name "realizes" ;
+    sh:path mls:realizes ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:class mls:Algorithm
+.
+
+pionera-sh:hasHyperParameterProperty
+    a sh:PropertyShape ;
+    rdfs:label "has hyper-parameter" ;
+    sh:name "has hyper-parameter" ;
+    sh:path mls:hasHyperParameter ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:class mls:HyperParameter
+.
+
+pionera-sh:hasPartProperty
+    a sh:PropertyShape ;
+    rdfs:label "has part" ;
+    sh:name "has part" ;
+    sh:path mls:hasPart ;
+    sh:nodeKind sh:BlankNodeOrIRI
+    # sin sh:class porque en la ontología apunta a EvaluationMeasure,
+    # EvaluationSpecification y sd:Software
+.
+
+pionera-sh:implementsProperty
+    a sh:PropertyShape ;
+    rdfs:label "implements" ;
+    sh:name "implements" ;
+    sh:path mls:implements ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:class mls:Algorithm
+.
+
+pionera-sh:hasQualityProperty
+    a sh:PropertyShape ;
+    rdfs:label "has quality" ;
+    sh:name "has quality" ;
+    sh:path mls:hasQuality ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:class mlso:HyperParameterCharacteristic
+.
+
+pionera-sh:specifiedByProperty
+    a sh:PropertyShape ;
+    rdfs:label "specified by" ;
+    sh:name "specified by" ;
+    sh:path mls:specifiedBy ;
+    sh:nodeKind sh:BlankNodeOrIRI
+    # sin sh:class porque en la ontología se usa con dos rangos:
+    # HyperParameter y EvaluationMeasure
+.

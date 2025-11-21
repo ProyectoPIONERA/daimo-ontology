@@ -1,0 +1,46 @@
+@prefix dcat:   <http://www.w3.org/ns/dcat#> .
+@prefix dcterms:<http://purl.org/dc/terms/> .
+@prefix ex:     <http://pionera.org/example#> .
+@prefix foaf:   <http://xmlns.com/foaf/0.1/> .
+@prefix mlds:   <http://pionera.org/ns/mlds#> .
+@prefix odrl:   <http://www.w3.org/ns/odrl/2/> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+
+########################
+# Modelos de ejemplo
+########################
+
+# Un modelo base, del que derivará el principal (opcional pero
+# aprovecha prov:wasDerivedFrom, cuyo dominio/rango es mlds:Model)
+ex:Model0 a mlds:Model .
+
+# Agente creador del modelo
+ex:Provider1 a foaf:Agent ;
+    foaf:name "Example provider" .
+
+# Modelo principal
+ex:Model1 a mlds:Model ;
+    dcterms:creator     ex:Provider1 ;           # quién lo ha creado
+    dcat:distribution   ex:Model1Distribution ;  # cómo se distribuye
+    odrl:hasPolicy      ex:Model1Policy ;        # política asociada
+    prov:wasDerivedFrom ex:Model0 .              # deriva de otro modelo
+
+########################
+# Distribución y servicio
+########################
+
+ex:Model1Distribution a dcat:Distribution ;
+    dcat:accessService ex:Model1Service .
+
+ex:Model1Service a dcat:DataService ;
+    dcat:servesDataset ex:Model1 .
+
+########################
+# Política ODRL del modelo
+########################
+
+ex:Model1Policy a odrl:Agreement ;
+    odrl:permission ex:Model1Permission .
+
+ex:Model1Permission a odrl:Permission ;  # subclase de odrl:Rule
+    odrl:target ex:Model1 .

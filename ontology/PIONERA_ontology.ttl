@@ -1,0 +1,212 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix mlds: <http://pionera.org/ns/mlds#> .
+@prefix mls: <http://www.w3.org/ns/mls#> .
+@prefix mlso: <http://w3id.org/mlso/> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix odrl: <http://www.w3.org/ns/odrl/2/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sd: <https://w3id.org/okn/o/sd/> .
+
+dcterms:creator a owl:ObjectProperty ;
+    rdfs:label "creator" ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range foaf:Agent .
+
+dcat:accessService a owl:ObjectProperty ;
+    rdfs:label "access service" ;
+    rdfs:domain dcat:Distribution ;
+    rdfs:range dcat:DataService .
+
+dcat:distribution a owl:ObjectProperty ;
+    rdfs:label "distribution" ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range dcat:Distribution .
+
+dcat:servesDataset a owl:ObjectProperty ;
+    rdfs:label "serves dataset" ;
+    rdfs:domain dcat:DataService ;
+    rdfs:range dcat:Dataset .
+
+mls: a owl:Ontology ;
+    mod:createdWith <https://chowlk.linkeddata.es/> .
+
+<http://www.w3.org/ns/mls#SourceCode> a owl:ObjectProperty ;
+    rdfs:label "source code" ;
+    rdfs:domain sd:Software ;
+    rdfs:range sd:SourceCode .
+
+mls:executes a owl:ObjectProperty ;
+    rdfs:label "executes" ;
+    rdfs:domain mls:Run ;
+    rdfs:range mls:Implementation .
+
+mls:hasHyperParameter a owl:ObjectProperty ;
+    rdfs:label "has hyper parameter" ;
+    rdfs:domain mls:Implementation ;
+    rdfs:range mls:HyperParameter .
+
+mls:hasOutput a owl:ObjectProperty ;
+    rdfs:label "has output" ;
+    rdfs:domain mls:Run ;
+    rdfs:range mlds:Model,
+        mls:ModelEvaluation .
+
+mls:hasPart a owl:ObjectProperty ;
+    rdfs:label "has part" ;
+    rdfs:domain mls:EvaluationProcedure,
+        mls:EvaluationSpecification,
+        mls:Implementation ;
+    rdfs:range mls:EvaluationMeasure,
+        mls:EvaluationSpecification,
+        sd:Software .
+
+mls:hasQuality a owl:ObjectProperty ;
+    rdfs:label "has quality" ;
+    rdfs:domain mls:HyperParameter ;
+    rdfs:range mlso:HyperParameterCharacteristic .
+
+mls:implements a owl:ObjectProperty ;
+    rdfs:label "implements" ;
+    rdfs:domain mls:Implementation ;
+    rdfs:range mls:Algorithm .
+
+mls:realizes a owl:ObjectProperty ;
+    rdfs:label "realizes" ;
+    rdfs:domain mls:Run ;
+    rdfs:range mls:Algorithm .
+
+mls:specifiedBy a owl:ObjectProperty ;
+    rdfs:label "specified by" ;
+    rdfs:domain mls:HyperParameterSetting,
+        mls:ModelEvaluation ;
+    rdfs:range mls:EvaluationMeasure,
+        mls:HyperParameter .
+
+odrl:Duty a owl:Class ;
+    rdfs:label "Duty" ;
+    rdfs:subClassOf odrl:Rule .
+
+odrl:Permission a owl:Class ;
+    rdfs:label "Permission" ;
+    rdfs:subClassOf odrl:Rule .
+
+odrl:Prohibition a owl:Class ;
+    rdfs:label "Prohibition" ;
+    rdfs:subClassOf odrl:Rule .
+
+odrl:assigneeOf a owl:ObjectProperty ;
+    rdfs:label "assignee of" ;
+    rdfs:domain odrl:Party ;
+    rdfs:range odrl:Offer .
+
+odrl:assignerOf a owl:ObjectProperty ;
+    rdfs:label "assigner of" ;
+    rdfs:domain odrl:Party ;
+    rdfs:range odrl:Offer .
+
+odrl:hasPolicy a owl:ObjectProperty ;
+    rdfs:label "has policy" ;
+    rdfs:domain mlds:Model ;
+    rdfs:range odrl:Agreement,
+        odrl:Offer .
+
+odrl:obligation a owl:ObjectProperty ;
+    rdfs:label "obligation" ;
+    rdfs:domain odrl:Agreement,
+        odrl:Offer ;
+    rdfs:range odrl:Rule .
+
+odrl:permission a owl:ObjectProperty ;
+    rdfs:label "permission" ;
+    rdfs:domain odrl:Agreement,
+        odrl:Offer ;
+    rdfs:range odrl:Rule .
+
+odrl:prohibition a owl:ObjectProperty ;
+    rdfs:label "prohibition" ;
+    rdfs:domain odrl:Agreement,
+        odrl:Offer ;
+    rdfs:range odrl:Rule .
+
+odrl:target a owl:ObjectProperty ;
+    rdfs:label "target" ;
+    rdfs:domain odrl:Rule ;
+    rdfs:range mlds:Model .
+
+prov:wasDerivedFrom a owl:ObjectProperty ;
+    rdfs:label "was derived from" ;
+    rdfs:domain mlds:Model ;
+    rdfs:range mlds:Model .
+
+sd:SoftwareConfiguration a owl:Class ;
+    rdfs:label "Software Configuration" ;
+    rdfs:subClassOf sd:Software .
+
+mlso:HyperParameterCharacteristic a owl:Class ;
+    rdfs:label "Hyper Parameter Characteristic" .
+
+mls:EvaluationProcedure a owl:Class ;
+    rdfs:label "Evaluation Procedure" .
+
+mls:HyperParameterSetting a owl:Class ;
+    rdfs:label "Hyper Parameter Setting" .
+
+foaf:Agent a owl:Class ;
+    rdfs:label "Agent" .
+
+sd:SourceCode a owl:Class ;
+    rdfs:label "Source Code" .
+
+dcat:DataService a owl:Class ;
+    rdfs:label "Data Service" .
+
+dcat:Distribution a owl:Class ;
+    rdfs:label "Distribution" .
+
+mls:Algorithm a owl:Class ;
+    rdfs:label "Algorithm" .
+
+mls:EvaluationMeasure a owl:Class ;
+    rdfs:label "Evaluation Measure" .
+
+mls:EvaluationSpecification a owl:Class ;
+    rdfs:label "Evaluation Specification" .
+
+mls:ModelEvaluation a owl:Class ;
+    rdfs:label "Model Evaluation" .
+
+odrl:Party a owl:Class ;
+    rdfs:label "Party" .
+
+mls:HyperParameter a owl:Class ;
+    rdfs:label "Hyper Parameter" .
+
+mls:Run a owl:Class ;
+    rdfs:label "Run" .
+
+sd:Software a owl:Class ;
+    rdfs:label "Software" .
+
+dcat:Dataset a owl:Class ;
+    rdfs:label "Dataset" .
+
+mls:Implementation a owl:Class ;
+    rdfs:label "Implementation" .
+
+odrl:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+mlds:Model a owl:Class ;
+    rdfs:label "Model" ;
+    rdfs:subClassOf dcat:Dataset .
+
+odrl:Offer a owl:Class ;
+    rdfs:label "Offer" .
+
+odrl:Rule a owl:Class ;
+    rdfs:label "Rule" .
+
