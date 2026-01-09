@@ -58,3 +58,12 @@ This image helps users and contributors quickly understand the ontology’s stru
 - Each subfolder should contain its own README.md explaining its contents and purpose.
 - Use version control and branching strategies to manage ontology evolution.
 - Ensure the conceptualization image is updated whenever the ontology structure changes.
+
+## Funding
+
+This work has received funding from the PIONERA project (Enhancing interoperability in data spaces through artificial intelligence), a project funded in the context of the call for Technological Products and Services for Data Spaces of the Ministry for Digital Transformation and Public Administration within the framework of the PRTR funded by the European Union (NextGenerationEU)
+
+<div align="center">
+  <img src="funding_label.png" alt="Logos financiación" width="900" />
+</div>
+
