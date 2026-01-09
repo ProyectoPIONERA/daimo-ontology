@@ -69,4 +69,4 @@ This work has received funding from the PIONERA project (Enhancing interoperabil
 
 ## License
 
-Mapping Editor is available under the **[Apache License 2.0](https://github.com/ProyectoPIONERA/daimo-ontology/blob/main/LICENSE)**.
+Ontology Development Repository is available under the **[Apache License 2.0](https://github.com/ProyectoPIONERA/daimo-ontology/blob/main/LICENSE)**.
